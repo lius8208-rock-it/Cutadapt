@@ -42,8 +42,3 @@ cutadapt --action trim \
 ${R1} \
 ${R2} > /scratch/st-jeffrich-1/${initials}/logs/cutadapt/${sample}.log
 
-submitting the job:
-
-for R1 in /arc/project/st-jeffrich-1/RNA_seq_sculpin/cluster/RNA_PS_raw_reads/*_R1.fastq.gz; do 
-sbatch --export=R1=${R1},initials=${projectName} cutadapt.sh; 
-done
